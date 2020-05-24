@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+		body {width: 100%; margin: 0; font-family: Arial, sans-serif;}
+		.container {padding: 0 30px 20px 30px; max-width: 100%; display: flex; flex-wrap: wrap; align-content: space-between; box-sizing: border-box;}
+		.menu {display: flex; justify-content: center; padding: 0; margin: 30px 0;}
+		.menu li {list-style: none; padding: 0 20px;}
+		.menu li > * {padding: 10px 15px;}
+		.menu li > a {border-radius: 30px; background: #A6652C; color: #fff;}
+		.container > * {width: 19%; margin-bottom: 1%;}
+        table {
+            margin: 0 auto;
+			border: 1px solid #999999;
+        }
+        table, td {
+            border-collapse: collapse;
+        }
+        td {
+            padding: 7px 30px;
+        }
+    </style>
+</head>
+<body>
+	<ul class="menu">
+		<li>Таблица умножения</li>
+		<li><a href="index2.html">Шахматы</a></li>
+	</ul>
+	<div class="container">
+        <script>
+
+            let col = 10;
+            let row = 10;
+
+            for(let r = 0; r < row; r++) {
+                document.write('<table>');
+                
+                for(let c = 0; c < col; c++) {
+                    document.write(`<tr><td>${r+1} x ${c+1} = ${(r+1) * (c+1)}</td></tr>`);
+                }
+
+                document.write('</table>');
+            }
+
+        </script>
+	</div>
+</body>
+</html>
